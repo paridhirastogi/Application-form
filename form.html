@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        
+ 
+            
+        <title>Application Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <script language="Javascript">
+   function FillAddress(f) {
+  if(f.addresstoo.checked === true) {
+    f.mailaddress.value = f.homeaddress.value;
+  }
+}
+$(function () {
+    $(":file").change(function () {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = imageIsLoaded;
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+
+function imageIsLoaded(e) {
+    $('#myImg').attr('src', e.target.result);
+};
+            </script>
+    </head>
+    <h1 style="color:darkslateblue"><center> STUDENT PROFILE </center></h1>
+    <body style="background-color:lightsteelblue">
+        <form name="Form" action="submitted.html">
+            
+            <input type='file' />
+<img id="myImg" src="#" alt="your image" />
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Post Info -->
+<div style='position:fixed;bottom:0;left:0;    
+            background:lightgray;width:100%;'>
+    
+</div>
+            
+            
+            <br><br>
+            <div style="margin-left:10px;width:150px;float: left">
+                First Name:</div>
+                <input type="text" name="first name" placeholder="Your First Name" required>
+            <br><br>
+                
+        <div style="margin-left: 10px;width:150px;float: left">
+            Middle Name:</div>
+            <input type="text" name="middle name" placeholder="Your Middle Name(optional)"><br><br>
+        
+        
+            <div style="margin-left: 10px;width:150px;float: left" >
+                Last Name: </div>
+            <input type="text" name="last name" placeholder="Your Last Name" required>         
+            <br><br>
+        <div style="margin-left: 10px;width:150px;float: left">
+             DOB: </div>
+            <input type="date" name="dob"required> <br><br>
+            <div style="margin-left: 10px; width:150px; float:left"required >
+            Gender:    
+            </div>   
+               <input type="radio" name="gender" value="male" >Male
+               <input type="radio" name="gender" value="female"> Female
+               <input type="radio" name="gender" value="other"> Other
+               <br><br>
+               
+                <div style="margin-left: 10px;width:150px;float: left">
+                Father Name: </div>
+            <input type="text" name="father name"placeholder="Father's Name" required> 
+            <br><br>
+            
+             <div style="margin-left: 10px;width:150px;float: left">
+                Mother Name: </div>
+            <input type="text" name="mother name" placeholder="Mother's Name" required=""> 
+            <br><br>
+            
+             <div style="margin-left: 10px;width:150px;float: left">
+                School Joined: </div>
+            <input type="date" name="school joined" required> 
+            <br><br>
+            
+             <div style="margin-left: 10px;width:150px;float: left">
+                Previous School: </div>
+            <input type="text" name="previous school" placeholder="(Optional)"> 
+            <br><br>
+            
+            <div style="margin-left: 10px;width:150px;float: left">
+                Category: </div>
+            <select>
+                <option value="general"> General</option>
+                <option value="sc/st"> SC/ST</option>
+                <option value="OBC"> OBC</option>
+                <option value="physically handicapped">Physically Handicapped </option>
+            </select>
+            <br><br>
+            
+             <div style="margin-left: 10px;width:150px;float: left">
+                Student Contact Number: </div>
+            <input type="number" name="student contact number" placeholder="eg.+919999000088" required> 
+            <br><br>
+            
+            <div style="margin-left: 10px;width:150px;float: left">
+                Student email: </div>
+            <input type="email" name="student email" placeholder="eg: abc@gmail.com" required>
+            <br><br>
+            
+            <div style="margin-left: 10px;width:150px;float: left">
+                 Home Contact Number: </div>
+            <input type="number" name="home contact number" placeholder="eg.+919999000088" required> 
+            <br><br>
+            
+            <div style="margin-left: 10px;width:150px;float: left">
+                Home Email: </div>
+            <input type="email" name="home email" placeholder="eg: abc@gmail.com" required> 
+            <br><br>
+            
+            <div style="margin-left: 10px;width:150px;float: left">
+                Home Address: </div>
+            <textarea type="text" name="homeaddress" required> </textarea>
+            <br><br>
+            
+            <input type="checkbox" name="addresstoo" onclick="FillAddress(this.form)">
+            <em>Check this box if Home Address and Mailing Address are the same.</em><br><br>
+            <div style="margin-left: 10px;width:150px;float: left">
+                Mail Address: </div>
+                
+            <textarea type="text" name="mailaddress" required> </textarea>
+            <br><br>
+           <button type="submit" value="submit changes"style=background-color:blue;color:white;><b>Submit Changes</b></button>
+           <button type="cancel" value="cancel changes"style=background-color:red;color:white;><b>Cancel Changes</b></button>
+</form>
+    </form>
+</html>
